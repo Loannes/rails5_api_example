@@ -31,11 +31,16 @@ module Api
         end
       end
 
+      def destroy
+        @user.destroy
+        head 204
+      end
+
       private
 
       def set_user
         begin
-          @user = User.find params[:id]
+          @user = @athorized
         rescue ActiveRecord::RecordNotFound
           user = User.new
           user.errors.add(:id, "Wrong ID provided")
