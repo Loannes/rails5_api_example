@@ -3,4 +3,6 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :body, presence: true
+
+  mount_base64_uploader :picture, PictureUploader
 end

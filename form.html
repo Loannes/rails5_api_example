@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>test form</title>
+</head>
+<body>
+
+<form action="http://localhost:3000/api/v1/posts" enctype="multipart/form-data" method="post">
+    <p>
+          title : <input type="text" name="post[title]"><br>
+           body : <input type="text" name="post[body]"><br>
+        <!--picture : <input type="files" name="post[picture]">-->
+    </p>
+    <input type="submit" value="Send"> <input type="reset">
+</form>
+
+</body>
+</html>
